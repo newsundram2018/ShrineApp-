@@ -33,7 +33,6 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(
-                filled: true,
                 // fillColor: Color(0xFFFF9000),
                 labelText: "Username",
               ),
@@ -42,7 +41,6 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
-                filled: true,
                 labelText: 'Password',
               ),
               obscureText: true,
@@ -56,6 +54,9 @@ class _LoginPageState extends State<LoginPage> {
                     _passwordController.clear()
                   },
                   child: const Text("CANCEL"),
+                  style: TextButton.styleFrom(
+                    primary: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () => Navigator.pop(context),
