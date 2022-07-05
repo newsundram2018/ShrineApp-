@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 120.0),
             TextField(
               controller: _usernameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 filled: true,
                 // fillColor: Color(0xFFFF9000),
                 labelText: "Username",
@@ -48,11 +48,14 @@ class _LoginPageState extends State<LoginPage> {
               alignment: MainAxisAlignment.end,
               children: <Widget>[
                 TextButton(
-                  onPressed: () => {},
+                  onPressed: () => {
+                    _usernameController.clear(),
+                    _passwordController.clear()
+                  },
                   child: const Text("CANCEL"),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.pop(context),
                   child: const Text("NEXT"),
                 )
               ],
