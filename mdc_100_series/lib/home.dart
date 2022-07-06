@@ -86,34 +86,6 @@ class HomePage extends StatelessWidget {
     // TODO: Pass Category variable to AsymmetricView (104)
 
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu,
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print("Menu button");
-          },
-        ),
-        title: const Text("SHRINE"),
-        actions: <Widget>[
-          IconButton(
-            onPressed: () => {print("Search Button")},
-            icon: const Icon(
-              Icons.search,
-              semanticLabel: 'search',
-            ),
-          ),
-          IconButton(
-            onPressed: () => {print("Filter Button")},
-            icon: const Icon(
-              Icons.tune,
-              semanticLabel: 'filter',
-            ),
-          ),
-        ],
-      ),
       // body: GridView.count(
       //   crossAxisCount: 2,
       //   padding: const EdgeInsets.all(16.0),
