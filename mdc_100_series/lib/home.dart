@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'model/products_repository.dart';
 import 'model/product.dart';
+import 'supplemental/asymmetric_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -33,6 +34,7 @@ class HomePage extends StatelessWidget {
     );
     return products.map((product) {
       return Card(
+        elevation: 0.0,
         clipBehavior: Clip.antiAlias,
         // TODO: Adjust card heights (103)
         child: Column(
@@ -54,10 +56,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
-
-                  // TODO: Change innermost Column (103)
                   children: <Widget>[
-                    // TODO: Handle overflowing labels (103)
                     Text(
                       product.name,
                       style: theme.textTheme.headline6,
@@ -115,11 +114,14 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: GridView.count(
-        crossAxisCount: 2,
-        padding: const EdgeInsets.all(16.0),
-        childAspectRatio: 8.0 / 9.0,
-        children: _buildGridCards(context),
+      // body: GridView.count(
+      //   crossAxisCount: 2,
+      //   padding: const EdgeInsets.all(16.0),
+      //   childAspectRatio: 8.0 / 9.0,
+      //   children: _buildGridCards(context),
+      // ),
+      body: AsymmetricView(
+        products: ProductsRepository.loadProducts(Category.all),
       ),
       resizeToAvoidBottomInset: false,
     );

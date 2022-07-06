@@ -56,12 +56,25 @@ class _LoginPageState extends State<LoginPage> {
                   child: const Text("CANCEL"),
                   style: TextButton.styleFrom(
                     primary: Theme.of(context).colorScheme.secondary,
+                    shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(7.0),
+                      ),
+                    ),
                   ),
                 ),
                 ElevatedButton(
                   onPressed: () => Navigator.pop(context),
                   child: const Text("NEXT"),
-                )
+                  style: ElevatedButton.styleFrom(
+                    elevation: 8.0,
+                    shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(7.0),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             )
           ],
