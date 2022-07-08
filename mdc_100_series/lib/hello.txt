@@ -1,0 +1,70 @@
+App-Documentation
+
+https://app.diagrams.net/
+
+
+1. Setup instructions
+2. Deployment instructions
+3. Repository
+4. Architecture Diagram
+5. ER-Diagram
+
+1.8.0_292
+
+
+nationaltest@yopmail.com
+woredatest@yopmail.com
+regionaltest@ypmail.com
+
+
+
+Flutter Widget List
+
+1. SafeArea
+2. Expanded
+3. Wrap
+4. AnimatedContainer
+5. Opacity
+6. FutureBuilder
+7. FadeTransition
+8. PageView 
+9. Table 
+10. SliverList & SliverGrid
+	
+	
+11. Sliver App Bar
+12. FadeInImage.   (transparent_image)
+13. StreamBuilder 
+14. InheritedModel
+15. ClipRRect ,ClipOval , ClipPath 
+16. Hero
+17. CustomPaint 
+18. Tooltip 
+19. FittedBox 
+20. LayoutBuilder
+21. Transform (for advance animations very easy)
+22. BackdropFilter 
+23. Align
+24. Positioned
+
+
+Task— 3 July
+
+
+1. Install App in two devices
+2. Edit Same data from both devices / 
+3. 
+4. On changeData via firebase Create Alarm & show Toast
+
+
+1.Change Data from Firebase a single String , Set Alarm app in useEffect.
+2.Change Data from Firebase sendPush Notification , Click on notification run useEffect according to notification Data.
+
+
+
+
+
+
+
+
+
